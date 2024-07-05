@@ -6,6 +6,7 @@ public class App {
     public static Menu MenuActual; // Creacion del arraylist MenuActual para guardar los valores recientes
     public static Menu MenuViejo; // Creacion del arraylist MenuViejo para guardar los valores del MenuActual
     public static boolean repetir = true; // Creacion de boolean de forma global para los ciclos
+    public static int opcion3 =0; // variable global 
 
         public static void main(String[] args) throws Exception {
             System.out.println();
@@ -80,33 +81,39 @@ public class App {
                 System.out.println("7- Yoguth C$15");
                 System.out.println("8- Agua C$12");
                 System.out.println("9- Imprimir factura");
-                System.out.println("0- Regresar");
+                System.out.println("0- Mas opciones");
                 int opcion2 = sc.nextInt(); // Lector para poder escoger la accion
                 sc.nextLine(); // Limpiador del buffer
             switch (opcion2) {
                 case 1:
-                    ingresarHamburguesas();
-                    System.out.println("¿Desea continuar?"); // Preguntar di estan bien los datos para que no haya conflictos al lanzar la factura
-                    System.out.println("1- Si");
-                    System.out.println("2- Corregir datos");
-                    int opcion3 = 0;
-                    opcion3 = sc.nextInt();
-                    sc.nextLine();
-                    switch (opcion3) {
-                        case 1:
-                            break;
-                        case 2:
-                            MenuActual.Hamburg = 0;
-                            continue;
-                        default:
-                            break;
-                    }
+                ingresarHamburguesas();
+                System.out.println(); // Preguntar si estan bien los datos para que no haya conflictos al lanzar la factura
+                System.out.println("1- Continuar");
+                System.out.println("2- Corregir datos");
+                System.out.println("3- Imprimir factura");
+                opcion3 = 0;
+                opcion3 = sc.nextInt();
+                sc.nextLine();
+                switch (opcion3) {
+                    case 1:
+                        break;
+                    case 2:
+                        MenuActual.Hamburg = 0;
+                        continue;
+                    case 3:
+                        MenuActual.factura();
+                        MenuActual.Hamburg=0;
+                    default:
+                        break;
+                
+                }
                     break;
                 case 2:
                     ingresarPapas();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -115,15 +122,20 @@ public class App {
                         case 2:
                             MenuActual.Papa = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Papa=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 3:
                     ingresarRefrescos();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -132,15 +144,20 @@ public class App {
                         case 2:
                             MenuActual.Refresc = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Refresc=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 4:
                     ingresarPizzas();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -149,15 +166,20 @@ public class App {
                         case 2:
                             MenuActual.Pizzas = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Pizzas=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 5:
                     ingresarNughets();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -166,15 +188,20 @@ public class App {
                         case 2:
                             MenuActual.Nughuets = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Nughuets=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 6:
                     ingresarEnsaladas();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -183,15 +210,20 @@ public class App {
                         case 2:
                             MenuActual.Enesalada = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Enesalada=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 7:
                     ingresarYogurts();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -200,15 +232,20 @@ public class App {
                         case 2:
                             MenuActual.Yogurth = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Yogurth=0;
+                            break;
                         default:
                             break;
                     }
                     break;
                 case 8:
                     ingresarAgua();
-                    System.out.println("¿Desea continuar?");
-                    System.out.println("1- Si");
+                    System.out.println(); 
+                    System.out.println("1- Continuar");
                     System.out.println("2- Corregir datos");
+                    System.out.println("3- Imprimir factura");
                     opcion3 = sc.nextInt();
                     sc.nextLine();
                     switch (opcion3) {
@@ -217,6 +254,10 @@ public class App {
                         case 2:
                             MenuActual.Agua = 0;
                             continue;
+                            case 3:
+                            MenuActual.factura();
+                            MenuActual.Agua=0;
+                            break;
                         default:
                             break;
                     }
@@ -233,7 +274,30 @@ public class App {
                     MenuActual.Agua=0;
                     break;
                 case 0:
-                    return;
+                    System.out.println("1- Corregir factura");
+                    System.out.println("2- Regresar");
+                    int opcion4 = 0;
+                    opcion4 = sc.nextInt();
+                    sc.nextLine();
+                    switch (opcion4) {
+                        case 1:
+                        MenuActual.Hamburg=0; //Para poder limpiar el menu Actual y reinicar toda la factura
+                        MenuActual.Papa=0;
+                        MenuActual.Refresc=0;
+                        MenuActual.Pizzas=0;
+                        MenuActual.Nughuets=0;
+                        MenuActual.Enesalada=0;
+                        MenuActual.Yogurth=0;
+                        MenuActual.Agua=0;
+                        continue;
+                        case 2:
+                            return;
+                    
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                    break;
                 default:
                     System.out.println("Opcion no valida");
                     break;
