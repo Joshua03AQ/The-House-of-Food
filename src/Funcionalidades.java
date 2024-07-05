@@ -100,7 +100,7 @@ public class Funcionalidades extends Menu{
     }
     @Override
     public void facturacionYoghurt(double IVA) {
-        double yg = this.Yogurth * 30;
+        double yg = this.Yogurth * 15;
         this. SubTotal = yg * IVA;
         this. Total = yg + SubTotal;
         System.out.println("Monto: "+"C$"+Total);

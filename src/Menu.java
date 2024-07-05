@@ -13,7 +13,7 @@ public abstract class Menu {
     // Constructor para la clase abstracta Menu
     public Menu(int Hamburg, int Papa, int Refresc, int Pizza, int Nughet, int Ensalada, int Yogurth, int Agua){
         this.Hamburg = Hamburg;
-        this.Papa = Pizza;
+        this.Papa = Papa;
         this.Refresc = Refresc;
         this.Pizzas = Pizza;
         this.Nughuets = Nughet;
