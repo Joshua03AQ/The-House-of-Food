@@ -1,14 +1,14 @@
 // Clase molde (abstracta) Menu
 public abstract class Menu {
     // Creacion de atributos de la clase Menu
-    public int Hamburg;
-    public int Papa;
-    public int Refresc;
-    public int Pizzas;
-    public int Nughuets;
-    public int Ensalada;
-    public int Yogurth;
-    public int Agua;
+    protected int Hamburg;
+    protected int Papa;
+    protected int Refresc;
+    protected int Pizzas;
+    protected int Nughuets;
+    protected int Ensalada;
+    protected int Yogurth;
+    protected int Agua;
    
     // Constructor para la clase abstracta Menu
     public Menu(int Hamburg, int Papa, int Refresc, int Pizza, int Nughet, int Ensalada, int Yogurth, int Agua){
