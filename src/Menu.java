@@ -1,25 +1,25 @@
 // Clase molde (abstracta) Menu
 public abstract class Menu {
     // Creacion de atributos de la clase Menu
-    public double Hamburg;
-    public double Papa;
-    public double Refresc;
-    public double Pizzas;
-    public double Nughuets;
-    public double Enesalada;
-    public double Yogurth;
-    public double Agua;
+    public int Hamburg;
+    public int Papa;
+    public int Refresc;
+    public int Pizzas;
+    public int Nughuets;
+    public int Ensalada;
+    public int Yogurth;
+    public int Agua;
    
     // Constructor para la clase abstracta Menu
-    public Menu(double H, double P, double R, double PZ, double N, double ES, double YG, double A){
-        this.Hamburg = H;
-        this.Papa = P;;
-        this.Refresc = R;
-        this.Pizzas = PZ;
-        this.Nughuets = N;
-        this.Enesalada = ES;
-        this.Yogurth = YG;
-        this.Agua = A;
+    public Menu(int Hamburg, int Papa, int Refresc, int Pizza, int Nughet, int Ensalada, int Yogurth, int Agua){
+        this.Hamburg = Hamburg;
+        this.Papa = Pizza;
+        this.Refresc = Refresc;
+        this.Pizzas = Pizza;
+        this.Nughuets = Nughet;
+        this.Ensalada = Ensalada;
+        this.Yogurth = Yogurth;
+        this.Agua = Agua;
     }
     // Metodo abstracto para mostrar los productos recien vendidos
     public abstract void mostrarDetalles();

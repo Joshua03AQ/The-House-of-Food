@@ -5,8 +5,8 @@ public class Funcionalidades extends Menu{
     private double IVA;
     private double Total;
     // Constructor para la clase Funcionalidades, con los atriubutos heredados de la clase abstracta Menu
-    public Funcionalidades(double H, double P, double R, double PZ, double N, double ES, double YG, double A){
-        super(H, P, R, PZ, N, ES, YG, A); // super
+    public Funcionalidades(int Hamburg, int Papa, int Refresc, int Pizzas, int Nughuets, int Ensalada, int Yogurth, int Agua){
+        super(Hamburg, Papa, Refresc, Pizzas, Nughuets, Ensalada, Yogurth, Agua); // super
     }
     // Sobreescritura del metodo Ganancia() de la clase Menu
     @Override
@@ -16,7 +16,7 @@ public class Funcionalidades extends Menu{
         double r = this.Refresc * 12;
         double pz = this.Pizzas * 70;
         double n = this.Nughuets * 25;
-        double es = this.Enesalada * 30;
+        double es = this.Ensalada * 30;
         double yg = this.Yogurth * 15;
         double a = this.Agua * 12;
         this.SubTotal = h + p + r + pz + n + es + yg + a;
@@ -32,7 +32,7 @@ public class Funcionalidades extends Menu{
      System.out.println("Refrescos: "+this.Refresc);
      System.out.println("Pizza: "+this.Pizzas);
      System.out.println("Nughets: "+this.Nughuets);
-     System.out.println("Ensaladas: "+this.Enesalada);
+     System.out.println("Ensaladas: "+this.Ensalada);
      System.out.println("Yoguths: "+this.Yogurth);
      System.out.println("Agua: "+this.Agua);
     }
@@ -44,7 +44,7 @@ public class Funcionalidades extends Menu{
         double r = this.Refresc * 12;
         double pz = this.Pizzas * 70;
         double n = this.Nughuets * 25;
-        double es = this.Enesalada * 30;
+        double es = this.Ensalada * 30;
         double yg = this.Yogurth * 15;
         double a = this.Agua * 12;
     this. SubTotal = h + p + r + pz + n + es + yg + a;
@@ -93,7 +93,7 @@ public class Funcionalidades extends Menu{
     }
     @Override
     public void facturacionEnsaladas(double IVA) {
-        double es = this.Enesalada * 30;
+        double es = this.Ensalada * 30;
         this. SubTotal = es * IVA;
         this. Total = es + SubTotal;
         System.out.println("Monto: "+"C$"+Total);

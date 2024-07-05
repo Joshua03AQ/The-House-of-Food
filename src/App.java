@@ -5,8 +5,7 @@ public class App {
     public static ArrayList<Menu> menu = new ArrayList<Menu>(); // Creacion del nuevo arraylist
     public static Menu MenuActual; // Creacion del arraylist MenuActual para guardar los valores recientes
     public static Menu MenuViejo; // Creacion del arraylist MenuViejo para guardar los valores del MenuActual
-    public static boolean repetir = true; // Creacion de boolean de forma global para los ciclos
-    public static int opcion3 =0; // variable global 
+    public static boolean repetir = true; // Creacion de boolean de forma global para los ciclos 
 
         public static void main(String[] args) throws Exception {
             System.out.println();
@@ -36,7 +35,7 @@ public class App {
                             MenuViejo.Refresc=0;
                             MenuViejo.Pizzas=0;
                             MenuViejo.Nughuets=0;
-                            MenuViejo.Enesalada=0;
+                            MenuViejo.Ensalada=0;
                             MenuViejo.Yogurth=0;
                             MenuViejo.Agua=0; 
                             break;
@@ -50,7 +49,7 @@ public class App {
                             MenuViejo.Refresc=0;
                             MenuViejo.Pizzas=0;
                             MenuViejo.Nughuets=0;
-                            MenuViejo.Enesalada=0;
+                            MenuViejo.Ensalada=0;
                             MenuViejo.Yogurth=0;
                             MenuViejo.Agua=0;
                             break;
@@ -91,7 +90,7 @@ public class App {
                 System.out.println("1- Continuar");
                 System.out.println("2- Corregir datos");
                 System.out.println("3- Imprimir factura");
-                opcion3 = 0;
+                int opcion3 = 0;
                 opcion3 = sc.nextInt();
                 sc.nextLine();
                 switch (opcion3) {
@@ -208,11 +207,11 @@ public class App {
                         case 1:
                             break;
                         case 2:
-                            MenuActual.Enesalada = 0;
+                            MenuActual.Ensalada = 0;
                             continue;
                             case 3:
                             MenuActual.factura();
-                            MenuActual.Enesalada=0;
+                            MenuActual.Ensalada=0;
                             break;
                         default:
                             break;
@@ -269,7 +268,7 @@ public class App {
                     MenuActual.Refresc=0;
                     MenuActual.Pizzas=0;
                     MenuActual.Nughuets=0;
-                    MenuActual.Enesalada=0;
+                    MenuActual.Ensalada=0;
                     MenuActual.Yogurth=0;
                     MenuActual.Agua=0;
                     break;
@@ -286,7 +285,7 @@ public class App {
                         MenuActual.Refresc=0;
                         MenuActual.Pizzas=0;
                         MenuActual.Nughuets=0;
-                        MenuActual.Enesalada=0;
+                        MenuActual.Ensalada=0;
                         MenuActual.Yogurth=0;
                         MenuActual.Agua=0;
                         continue;
@@ -307,7 +306,7 @@ public class App {
             // Acceder directamente al atributo de la instancia del menu actual
             public static void ingresarHamburguesas() {
                 System.out.println("Ingrese la cantidad de hamburguesa");
-                MenuActual.Hamburg = sc.nextDouble();
+                MenuActual.Hamburg = sc.nextInt();
                 MenuViejo.Hamburg = MenuActual.Hamburg;
                 sc.nextLine();
                 MenuActual.facturacionHamburguesa(0.15);
@@ -315,7 +314,7 @@ public class App {
             }
             public static void ingresarPapas() {
                 System.out.println("Ingrese la cantidad de papa");
-                MenuActual.Papa = sc.nextDouble();
+                MenuActual.Papa = sc.nextInt();
                 MenuViejo.Papa = MenuActual.Papa;
                 sc.nextLine();
                 MenuActual.facturacionPapas(0.15);
@@ -323,7 +322,7 @@ public class App {
             }
             public static void ingresarRefrescos() {
                 System.out.println("Ingrese la cantidad de refresco");
-                MenuActual.Refresc = sc.nextDouble();
+                MenuActual.Refresc = sc.nextInt();
                 MenuViejo.Refresc = MenuActual.Refresc;
                 sc.nextLine();
                 MenuActual.facturacionRefrescos(0.15);
@@ -331,7 +330,7 @@ public class App {
             }
             public static void ingresarPizzas() {
                 System.out.println("Ingrese la cantidad de pizza");
-                MenuActual.Pizzas = sc.nextDouble();
+                MenuActual.Pizzas = sc.nextInt();
                 MenuViejo.Pizzas = MenuActual.Pizzas;
                 sc.nextLine();
                 MenuActual.facturacionPizzas(0.15);
@@ -339,7 +338,7 @@ public class App {
             }
             public static void ingresarNughets() {
                 System.out.println("Ingrese la cantidad de nughet");
-                MenuActual.Nughuets = sc.nextDouble();
+                MenuActual.Nughuets = sc.nextInt();
                 MenuViejo.Nughuets = MenuActual.Nughuets;
                 sc.nextLine();
                 MenuActual.facturacionNughuets(0.15);
@@ -347,15 +346,15 @@ public class App {
             }
             public static void ingresarEnsaladas() {
                 System.out.println("Ingrese la cantidad de ensalada");
-                MenuActual.Enesalada = sc.nextDouble();
-                MenuViejo.Enesalada = MenuActual.Enesalada;
+                MenuActual.Ensalada = sc.nextInt();
+                MenuViejo.Ensalada = MenuActual.Ensalada;
                 sc.nextLine();
                 MenuActual.facturacionEnsaladas(0.15);
                 System.out.println("===================================");
             }
             public static void ingresarYogurts() {
                 System.out.println("Ingrese la cantidad de yogurt");
-                MenuActual.Yogurth = sc.nextDouble();
+                MenuActual.Yogurth = sc.nextInt();
                 MenuViejo.Yogurth = MenuActual.Yogurth;
                 sc.nextLine();
                 MenuActual.facturacionYoghurt(0.15);
@@ -363,7 +362,7 @@ public class App {
             }
             public static void ingresarAgua() {
                 System.out.println("Ingrese la cantidad de agua");
-                MenuActual.Agua = sc.nextDouble();
+                MenuActual.Agua = sc.nextInt();
                 MenuViejo.Agua = MenuActual.Agua;
                 sc.nextLine();
                 MenuActual.facturacionAgua(0.15);
